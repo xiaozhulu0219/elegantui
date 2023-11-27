@@ -5,7 +5,7 @@ import Navlink from "./components/navlink.vue"
 
 <template>
   <div class="elg-container">
-    <div class="elg-title">Elegantui组件展示</div>
+    <h1 class="elg-title">ElegantUI组件展示</h1>
     <Navlink />
     <div class="elg-content">
       <router-view></router-view>
@@ -19,5 +19,8 @@ import Navlink from "./components/navlink.vue"
   width: 80vw;
   margin: 0 auto;
 
+}
+.elg-content{
+  width: 100%;
 }
 </style>
