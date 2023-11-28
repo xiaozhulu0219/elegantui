@@ -1,8 +1,9 @@
 <template>
   <div class="testcolor">这是icon界面</div>
   <div>对已经有的组件库做二次封装
-    
+
   </div>
+  <div> 需要用的到库是font awesome</div>
 </template>
 
 <script>
