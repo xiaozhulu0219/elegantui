@@ -26,7 +26,7 @@ $colors : (
     @each $var,
     $co in $colors {
         --#{$var}:#{$co};
-        @for $i from 1 through 4{
+        @for $i from 1 through 5{
             --#{$var}-light-#{$i*2-1}: #{mix($co,#fff,calc($hun - $hun * ($i * 2 - 1)/ 10))}
         }
         --#{$var}-light-8:#{mix($co,#fff,20%)};
@@ -58,7 +58,7 @@ $colors : (
   --elg-fill-color-dark: #ebedf0;
   --elg-fill-color-darker: #e6e8eb;
   --elg-fill-color-blank: #ffffff;
-
+  // --elg-bg-color
   // 和 border 相关的变量
   --elg-border-width: 1px;
   --elg-border-style: solid;
