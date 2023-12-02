@@ -5,7 +5,7 @@ export default {
     },
     size:{
         type:String,
-        default:'xl'
+        default:'lg'
     },
     rotation:{
         type:String|| Number,
