@@ -125,3 +125,23 @@
         
     }
 }
+
+.elg-button-text{
+    --elg-button-bg-color:none;
+    border:none;
+    --elg-button-text-color:var(--primary);
+    &:hover{
+    --elg-button-hover-bg-color:none;
+    border:none;
+    --elg-button-hover-text-color:var(--primary-light-3);
+    &.elg-button-disabled{
+    --elg-button-hover-text-color:var(--elg-text-color-disabled);
+
+    }
+    }
+    &:focus{
+        --elg-button-focus-border:none;
+        --elg-button-focus-bg:none;
+        --elg-button-focus-text-color:var(--primary);
+    }
+}

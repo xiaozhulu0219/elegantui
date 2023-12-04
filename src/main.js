@@ -10,10 +10,14 @@ import "@/assets/base.css"
 import Icon from "@/components/Icon/Icon.vue";
 
 // 引入button组件
-import Button from "@/components/Button/Button.vue"
+import Button from "@/components/Button/Button.vue";
+
+// 引入card组件
+import Card from "@/components/Card/Card.vue";
 const app = createApp(App)
 app.component('Elg-Icon',Icon)
 app.component('Elg-Button',Button)
+app.component('Elg-Card',Card)
 app.use(router)
 app.mount('#app')
 
