@@ -98,6 +98,12 @@
 
       
     </div>
+    <h2 class="row-title">文字按钮</h2>
+    <div class="row" >
+      <Elg-Button type="text" >文字按钮</Elg-Button>
+      <Elg-Button type="text" disabled>文字按钮</Elg-Button>
+
+    </div>
     <h2 class="row-title">点击事件</h2>
     <div class="row">
       <Elg-Button type="primary" @click="handleClick" ref="target">主要按钮</Elg-Button>
