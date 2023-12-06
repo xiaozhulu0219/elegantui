@@ -1,13 +1,65 @@
 <template>
-  <div>这是dialog</div>
+  <h2 class="row-title">基本用法</h2>
+  <div class="row">
+    <Elg-Button type="text" @click="isShow1 = !isShow1">
+      点击打开基本对话框
+    </Elg-Button>
+
+  </div>
+  <h2 class="row-title">无footer</h2>
+  <div class="row">
+    <Elg-Button type="text" @click="isShow2 = !isShow2">
+      点击打开无footer对话框
+    </Elg-Button>
+
+  </div>
+  <h2 class="row-title">自定义footer</h2>
+  <div class="row">
+    <Elg-Button type="text" @click="isShow3 = !isShow3">
+      自定义footer
+    </Elg-Button>
+
+  </div>
+  <h2 class="row-title">自定义宽度和位置</h2>
+  <div class="row">
+    <Elg-Button type="text" @click="isShow4 = !isShow4">
+      自定义宽度和位置对话框
+    </Elg-Button>
+
+  </div>
+  <Elg-Dialog :visible="isShow1" @close="isShow1 = !isShow1" @confirm="isShow1 = !isShow1">
+    这是一个基本的对话框</Elg-Dialog>
+  <Elg-Dialog :visible="isShow2" @close="isShow2 = !isShow2" @confirm="isShow2 = !isShow2" :footer="false">
+    这是一个无footer对话框</Elg-Dialog>
+  <Elg-Dialog :visible="isShow3">
+    自定义footer
+    <template #footer>
+
+      <Elg-Button type="danger" size="small" :style="{ marginRight: '10px' }" @click="isShow3 = !isShow3">重置</Elg-Button>
+
+      <Elg-Button type="primary" size="small" @click="isShow3 = !isShow3">确定</Elg-Button>
+    </template>
+
+    
+  </Elg-Dialog>
+  <Elg-Dialog :visible="isShow4"
+     @close="isShow4 = !isShow4" 
+     @confirm="isShow4 = !isShow4"
+     width="600px"
+     top="40vh"
+     title="温馨提醒">
+      传递了 title、width、top 这三个 prop
+    </Elg-Dialog>
 </template>
 
-<script>
-export default {
+<script setup>
 
-}
+import { ref } from 'vue';
+const isShow1 = ref(false);
+const isShow2 = ref(false);
+const isShow3 = ref(false);
+const isShow4 = ref(false);
+
 </script>
 
-<style>
-
-</style>
+<style></style>

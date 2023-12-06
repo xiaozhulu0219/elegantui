@@ -1,0 +1,97 @@
+
+.elg-dialog-container  {
+    --elg-dialog-container-bg-color: rgba(0, 0, 0, 0.6);
+    --elg-dialog-bg-color: #fff;
+    --elg-dialog-title-font-size: var(--elg-font-size-large);
+    --elg-dialog-main-font-size: var(--elg-font-size-base);
+    --elg-dialog-main-text-color: var(--elg-text-color-regular);
+    --elg-dialog-transition-time:0.2s;
+    --elg-dialog-transition:var(--elg-dialog-transition-time) linear;
+    --elg-dialog-border-radius:var(--elg-border-radius-base);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: var(--elg-dialog-container-bg-color);
+
+    top:0px;
+    left: 0px;
+
+}
+
+.elg-dialog {
+    // border: 1px solid #ccc;
+    background-color: var(--elg-dialog-bg-color);
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    border-radius: var(--elg-dialog-border-radius);
+    padding: 20px;
+    box-sizing: border-box;
+    // transition: 1s;
+
+    .elg-dialog-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .elg-dialog-title-left {
+            font-size: var(--elg-dialog-title-font-size);
+
+        }
+    }
+
+    .elg-dialog-body {
+        min-height: 40px;
+        font-size: var(--elg-dialog-main-font-size);
+        color: var(--elg-dialog-main-text-color);
+    }
+
+    .elg-dialog-footer {
+        padding-top: 10px;
+        text-align: right;
+
+        button {
+            margin: 0 10px;
+        }
+    }
+    .elg-dialog-footer-self{
+        text-align: left;
+    }
+}
+
+.fade-enter-active {
+    transition: var(--elg-dialog-transition);
+}
+
+.fade-leave-active{
+  transition: var(--elg-dialog-transition);
+}
+
+.fade-enter-from .elg-dialog{
+    transform: translateY(-200px);
+    opacity:0 ;
+    
+}
+.fade-enter-active .elg-dialog {
+    transition: var(--elg-dialog-transition);
+
+}
+.fade-enter-to .elg-dialog{
+       transform: translateY(0px);
+    opacity:1 ;
+
+}
+.fade-leave-from .elg-dialog{
+    transform: translateY(0px);
+    opacity:1;
+}
+.fade-leave-active .elg-dialog{
+    transition: var(--elg-dialog-transition);
+
+}
+.fade-leave-to .elg-dialog{
+    transform: translateY(-200px);
+    opacity:0;
+}
