@@ -17,11 +17,15 @@ import Card from "@/components/Card/Card.vue";
 
 // 引入dialog组件
 import Dialog from "@/components/Dialog/Dialog.vue"
+
+// 引入pager组件
+import Pager from "@/components/Pager/Pager.vue"
 const app = createApp(App)
 app.component('Elg-Icon',Icon)
 app.component('Elg-Button',Button)
 app.component('Elg-Card',Card)
 app.component('Elg-Dialog',Dialog)
+app.component('Elg-Pager',Pager)
 app.use(router)
 app.mount('#app')
 

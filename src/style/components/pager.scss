@@ -1,0 +1,66 @@
+.elg-pager {
+    --elg-pager-text-color: var(--elg-text-color-primary);
+    --elg-pager-text-active-color: var(--primary);
+    --elg-pager-text-font-size: var(--elg-font-size-base);
+    --elg-pager-text-hover-color: var(--primary);
+    --elg-pager-icon-disable:var(--elg-disabled-text-color);
+    --elg-pager-bg-color:transparent;
+    --elg-pager-size:30px;
+
+    display: flex;
+    align-items: center;
+    
+    a {
+        margin: 0 3px;
+        color: var(--elg-pager-text-color);
+        font-size: var(--elg-pager-text-font-size);
+        font-weight: bold;
+        cursor: pointer;
+        height: var(--elg-pager-size);
+        width: var(--elg-pager-size);
+        background-color:var(--elg-pager-bg-color) ;
+        display:inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2px;
+        &.active {
+            color: var(--elg-pager-text-active-color);
+            cursor: auto;
+
+        }
+
+        &:hover {
+            color: var(--elg-pager-text-hover-color);
+
+        }
+        .elg-pager-icon-disabled{
+            color:var(--elg-pager-icon-disable);
+        cursor: not-allowed;
+
+        }
+    }
+
+}
+@each $val in primary,warning,danger,info,success{
+    .elg-pager-#{$val}{
+        // --elg-pager-bg-color:var(--#{$val});
+        --elg-pager-bg-color:var(--elg-fill-color-dark);
+        a.active{
+            --elg-pager-bg-color: var(--#{$val});
+            --elg-pager-text-active-color:#fff;
+        }
+        a:hover{
+            --elg-pager-text-hover-color:var(--#{$val});
+
+        }
+
+    }
+}
+.elg-pager-small{
+    --elg-pager-size:20px;
+    --elg-pager-text-font-size:var(--elg-font-size-extra-small);
+}
+.elg-pager-large{
+    --elg-pager-size:33px;
+    --elg-pager-text-font-size:var( --elg-font-size-medium);
+}
