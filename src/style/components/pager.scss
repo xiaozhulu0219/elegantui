@@ -38,6 +38,24 @@
         cursor: not-allowed;
 
         }
+        &.prev:hover {
+            .prev-icon{
+                display: block;
+                font-weight: 200;
+            }
+            .textinfo{
+                display: none;
+            }
+        }
+        &.next:hover{
+            .next-icon{
+                display: block;
+                font-weight: 200;
+            }
+            .textinfo{
+                display: none;
+            }
+        }
     }
 
 }
@@ -48,10 +66,14 @@
         a.active{
             --elg-pager-bg-color: var(--#{$val});
             --elg-pager-text-active-color:#fff;
+            
         }
         a:hover{
             --elg-pager-text-hover-color:var(--#{$val});
+            &.active{
+            --elg-pager-text-hover-color:#fff;
 
+            }
         }
 
     }
@@ -63,4 +85,7 @@
 .elg-pager-large{
     --elg-pager-size:33px;
     --elg-pager-text-font-size:var( --elg-font-size-medium);
+}
+.next-icon,.prev-icon{
+    display: none;
 }
