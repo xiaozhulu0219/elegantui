@@ -56,7 +56,6 @@ let currentpage9 = ref(1);
 
 
 const handleChange=(newPage)=>{
-  console.log(newPage);
   currentpage1.value = newPage
 }
 

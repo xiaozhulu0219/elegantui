@@ -9,8 +9,13 @@ defineOptions({
 const emit = defineEmits(['current-change'])
 
 const pageTo=(pages)=>{
-   if(pages==='...'){
-    return 
+   if(pages==='prev'){
+    // 往前减5页
+    pages=props.currentPage-5
+   }
+   if(pages==='next'){
+    pages=props.currentPage+5
+
    }
    if(pages<1){
     pages=1
@@ -33,7 +38,7 @@ const pageCount = computed(()=>{
         return props.pageCount
     }
 })
-console.log(props)
+// console.log(props)
 
 const list = computed(() => {
 
@@ -55,13 +60,13 @@ const list = computed(() => {
             for(let i=1;i<=5;i++){
                 pages.push(i)
             }
-            pages.push('...')
+            pages.push('next')
             pages.push(props.total)
         }
         else if(props.currentPage>props.total-4){
             // 页码处于最后
             pages.push(1);
-                pages.push('...');
+                pages.push('prev');
             for(let i=props.total-4;i<=props.total;i++){
                 
                 pages.push(i)
@@ -69,11 +74,11 @@ const list = computed(() => {
         }else{
             // 处于中间位置
             pages.push(1);
-            pages.push('...');
+            pages.push('prev');
             for(let i=props.currentPage-2;i<=props.currentPage+2;i++){
                 pages.push(i);
             }
-            pages.push('...');
+            pages.push('next');
             pages.push(props.total)
         }
         return pages
@@ -86,29 +91,35 @@ const list = computed(() => {
     <div class="elg-pager" 
     :class="[props.type?`elg-pager-${props.type}`:'',
 props.size?`elg-pager-${props.size}`:'']">
-        <a>
+        <a @click="pageTo(1)" >
             <Elg-Icon 
             icon="fa-angle-double-left" 
             :class="{'elg-pager-icon-disabled':props.currentPage===1}"
-            @click="pageTo(1)"  />
+             />
         </a>
-        <a>
+        <a  @click="pageTo(props.currentPage-1)" >
             <Elg-Icon 
             icon="fa-angle-left"
              :class="{'elg-pager-icon-disabled':props.currentPage===1}"
-             @click="pageTo(props.currentPage-1)" />
+            />
         </a>
 
         <a v-for="(item, index) in list" :key="index"
-         :class="{ active: item === props.currentPage }"
+         :class="{ active: item === props.currentPage,
+         prev:item ==='prev',
+         next:item ==='next'}"
          :disabled="item === props.currentPage"
-         @click="pageTo(item)">{{ item }}</a>
-
-        <a>
-            <Elg-Icon @click="pageTo(props.currentPage+1)" icon="fa-angle-right" :class="{'elg-pager-icon-disabled':props.currentPage===props.total}" />
+         
+         @click="pageTo(item)"><span class="textinfo" >{{ (item==='prev' || item==='next') ? '...' :item  }}</span>
+         <Elg-Icon icon="fa-caret-left" class="prev-icon" v-if="item==='prev'" ></Elg-Icon>
+         <Elg-Icon icon="fa-caret-right" class="next-icon" v-if="item==='next'"></Elg-Icon>
         </a>
-        <a >
-            <Elg-Icon @click="pageTo(props.total)" icon="fa-angle-double-right"  :class="{'elg-pager-icon-disabled':props.currentPage===props.total}" />
+
+        <a @click="pageTo(props.currentPage+1)">
+            <Elg-Icon  icon="fa-angle-right" :class="{'elg-pager-icon-disabled':props.currentPage===props.total}" />
+        </a>
+        <a @click="pageTo(props.total)">
+            <Elg-Icon  icon="fa-angle-double-right"  :class="{'elg-pager-icon-disabled':props.currentPage===props.total}" />
         </a>
     </div>
 </template>
