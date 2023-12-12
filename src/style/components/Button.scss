@@ -22,6 +22,7 @@
     border-radius: var(--elg-button-border-radius);
     color: var(--elg-button-text-color);
     height:auto ;
+    min-width: 70px;
     width: auto;
     font-size:var(--elg-button-font-size) ;
     cursor:var(--elg-button-cursor-status);
@@ -48,6 +49,7 @@
     &.elg-button-circle{
         height:var(--elg-button-circle-size) ;
         width: var(--elg-button-circle-size);
+        min-width: auto;
         --elg-button-border-radius:var(--elg-border-radius-circle);
         display: inline-flex;
         justify-content: center;
