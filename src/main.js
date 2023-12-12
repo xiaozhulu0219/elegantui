@@ -23,7 +23,10 @@ import Pager from "@/components/Pager/Pager.vue"
 
 // 引入Collapse组件
 import Collapse from "@/components/Collapse/Collapse.vue";
-import CollapseItem from "@/components/Collapse/CollapseItem.vue"
+import CollapseItem from "@/components/Collapse/CollapseItem.vue";
+
+// 引入tooltip组件
+import Tooltip from "@/components/Tooltip/Tooltip.vue";
 const app = createApp(App)
 app.component('Elg-Icon',Icon)
 app.component('Elg-Button',Button)
@@ -32,6 +35,7 @@ app.component('Elg-Dialog',Dialog)
 app.component('Elg-Pager',Pager)
 app.component('Elg-Collapse',Collapse)
 app.component('Elg-Collapse-Item',CollapseItem)
+app.component('Elg-Tooltip',Tooltip)
 app.use(router)
 app.mount('#app')
 
