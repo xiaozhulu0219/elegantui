@@ -1,0 +1,33 @@
+.elg-dropdown {
+    --elg-dropdown-active-text-color: var(--primary);
+    --elg-dropdown-active-bg-color: var(--primary-light-9);
+    --elg-dropdown-disabled-text:var(--elg-disabled-text-color);
+    --elg-dropdown-disabled-bg-color:transparent;
+    list-style: none;
+
+    .elg-dropdown_ul {
+        margin: 0px;
+        padding:10px 0px;
+    }
+
+    .elg-dropdown_ul .tli {
+        list-style: none;
+        padding: 0 20px;
+        box-sizing: border-box;
+        cursor: pointer;
+        &:hover {
+            color: var(--elg-dropdown-active-text-color);
+            background-color: var(--elg-dropdown-active-bg-color);
+        }
+        &.elg-dropdown-li-disabled{
+            cursor: not-allowed;
+            color: var(--elg-dropdown-disabled-text);
+            background-color: var(--elg-dropdown-disabled-bg-color);
+        }
+        
+    }
+    .elg-dropdown-li-divided{
+        border-bottom:1px solid #ddd;
+        margin: 10px 0 ;
+    }
+}

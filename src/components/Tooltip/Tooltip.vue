@@ -1,6 +1,6 @@
 <script setup >
 import tooltipProps from "./props";
-import { ref, onMounted, reactive, computed, watch, nextTick, defineExpose } from "vue";
+import { ref, computed, watch, nextTick, } from "vue";
 import "@/style/components/Tooltip.scss";
 import { createPopper } from '@popperjs/core';
 const isShow = ref(false)// 默认先开启打开
@@ -132,7 +132,7 @@ const events = computed(() => {
                         timerenter = null;
 
                     }
-                    if(timerleave){
+                    if (timerleave) {
                         // 有延时关闭
                         clearTimeout(timerleave);
                         timerleave = null
@@ -149,12 +149,12 @@ const events = computed(() => {
                         }, props.openDelay)
                         return
                     }
-                    if(props.closeDelay && isShow.value){
+                    if (props.closeDelay && isShow.value) {
                         // 当前打开 且有延时关闭
-                        timerleave = setTimeout(()=>{
+                        timerleave = setTimeout(() => {
                             isShow.value = false;
 
-                        },props.closeDelay)
+                        }, props.closeDelay)
                         return
                     }
                     isShow.value = !isShow.value;
@@ -221,9 +221,14 @@ const button2 = () => {
         <!-- 弹出元素 -->
         <div class="tooltip_poper-element" v-if="isShow" ref="poperRef" id="tooltip"
             :class="[props.effect === 'light' ? 'elg-tooltip-light' : '']" role="tooltip" style="z-index: 999;">
-            <slot name="content">
-                {{ props.content }}
-            </slot>
+            
+            <div v-if="$slots.content">
+                <slot name="content">
+                </slot>
+            </div>
+            
+            <div v-else="props.content" style="padding:0 10px">
+                {{ props.content }}</div>
             <div id="arrow" style="z-index: -999;" data-popper-arrow></div>
         </div>
         <!-- <div :style="{ marginTop: '200px' }">
