@@ -27,6 +27,9 @@ import CollapseItem from "@/components/Collapse/CollapseItem.vue";
 
 // 引入tooltip组件
 import Tooltip from "@/components/Tooltip/Tooltip.vue";
+
+// 引入下拉菜单组件
+import Dropdown from "@/components/Dropdown/Dropdown.vue";
 const app = createApp(App)
 app.component('Elg-Icon',Icon)
 app.component('Elg-Button',Button)
@@ -36,6 +39,7 @@ app.component('Elg-Pager',Pager)
 app.component('Elg-Collapse',Collapse)
 app.component('Elg-Collapse-Item',CollapseItem)
 app.component('Elg-Tooltip',Tooltip)
+app.component('Elg-Dropdown',Dropdown)
 app.use(router)
 app.mount('#app')
 
