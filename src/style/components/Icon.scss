@@ -1,0 +1,13 @@
+.elg-icon{
+  --elg-icon-color: inherit;
+  color: var(--elg-icon-color);
+  display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@each $type in primary,warning,success,danger,info{
+    .elg-icon-#{$type}{
+        color: var(--#{$type})
+    }
+}
