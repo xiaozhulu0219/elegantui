@@ -2,14 +2,8 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import path from "path"
-import { fileURLToPath, URL } from 'node:url'
-import { resolve, dirname } from 'path'
+
 // https://vitejs.dev/config/
-dirname(fileURLToPath(import.meta.url))
-console.log('1',import.meta.url);
-console.log('2',fileURLToPath(import.meta.url));
-console.log('3',dirname(fileURLToPath(import.meta.url)))
-console.log('4',__dirname)
 export default defineConfig({
   plugins: [vue(),vueJsx(),],
   resolve: {
@@ -24,5 +18,25 @@ export default defineConfig({
         additionalData:`@import "./src/style/var.scss";`
       }
     }
+  },
+  publicDir: 'empty',
+  build:{
+    outDir: 'dist/es',
+    lib:{
+      entry: path.resolve(__dirname, 'src/bundle.js'),
+      name:'ElegantUI',
+      fileName:'ElegantUI',
+      formats: ['es']
+    }
+  },
+  rollupOptions: {
+    external: [
+      'vue',
+      '@fortawesome/fontawesome-svg-core',
+      '@fortawesome/free-solid-svg-icons',
+      '@fortawesome/vue-fontawesome',
+      '@popperjs/core',
+      
+    ]
   }
 })

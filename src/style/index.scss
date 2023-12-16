@@ -1,6 +1,12 @@
 @import "./var.scss";
 @import "./reset.scss";
-.test {
-    font-size:$large-size ;
-    color:$color-red;
-}
+
+// 重新引入各个模块
+@import "./components/Button.scss";
+@import "./components/Card.scss";
+@import "./components/Collapse.scss";
+@import "./components/Dialog.scss";
+@import "./components/Dropdown.scss";
+@import "./components/Icon.scss";
+@import "./components/pager.scss";
+@import "./components/Tooltip.scss"
