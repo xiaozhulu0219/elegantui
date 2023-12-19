@@ -3,7 +3,7 @@ import props from "./props";
 import "@/style/components/Button.scss";
 import {ref} from "vue";
 defineOptions({
-    name:'Elg-Button'
+    name:'ElgButton'
 })
 
 function handleClick(){

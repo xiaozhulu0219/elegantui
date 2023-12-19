@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import path from "path"
-
+console.log('运行了')
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue(),vueJsx(),],
@@ -27,14 +27,19 @@ export default defineConfig({
       name:'ElegantUI',
       fileName:'ElegantUI',
       formats: ['umd']
+    },
+    rollupOptions: {
+      external: [
+        'vue',
+      ],
+      output:{
+        exports: 'named',
+        globals: {
+          vue: 'Vue'
+        }
+      },
+     
     }
   },
-  rollupOptions: {
-    external: [
-      'vue',
-    ],
-    globals: {
-        vue: 'VueSpecial'
-      }
-  }
+  
 })

@@ -6,7 +6,7 @@ import elgProps from "./props"
 import "@/style/components/Icon.scss"
 library.add(fas)
 defineOptions({
-    name: 'elg-icon',
+    name: 'ElgIcon',
 })
 const prop = defineProps(elgProps);
 </script>

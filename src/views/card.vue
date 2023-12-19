@@ -72,6 +72,7 @@
   </template>
     </Elg-Card>
   </div>
+  
 </template>
 
 <script>

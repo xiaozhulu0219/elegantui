@@ -2,7 +2,7 @@
 import dialogProps from "./props"
 import "@/style/components/Dialog.scss"
 defineOptions({
-    name: 'Elg-Dialog'
+    name: 'ElgDialog'
 })
 const emit = defineEmits(['close', 'confirm'])
 const props = defineProps(dialogProps)

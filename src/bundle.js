@@ -33,6 +33,7 @@ const componentArr =[Button,Card,Collapse,CollapseItem,Dialog,Dropdown,Icon,Page
 
 const install = (app)=>{
     componentArr.forEach((comp)=>{
+        // console.log(comp.name)
         app.component(comp.name,comp)
     })
 
@@ -40,19 +41,22 @@ const install = (app)=>{
     app.component('font-awesome-icon',FontAwesomeIcon)
 }
 
-export default install;
+export default {
+    install
+};
 export {
     install,
-    Button,
-    Card,
-    Collapse,
-    CollapseItem,
-    Dialog,
-    Dropdown,
-    Icon,
-    Pager,
-    Tooltip
+    Button as ElgButton,
+    Card as ElgCard,
+    Collapse as ElgCollapse,
+    CollapseItem as ElgCollapseItem ,
+    Dialog as ElgDialog,
+    Dropdown as ElgDropdown,
+    Icon as ElgIcon ,
+    Pager as ElgPager,
+    Tooltip as ElgTooltip
 }
+
 
 
 

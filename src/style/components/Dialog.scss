@@ -10,7 +10,7 @@
     --elg-dialog-border-radius:var(--elg-border-radius-base);
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     background-color: var(--elg-dialog-container-bg-color);
 
     top:0px;

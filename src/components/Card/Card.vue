@@ -2,7 +2,7 @@
 import "@/style/components/Card.scss";
 import cardProps from "./props"
 defineOptions({
-    name: 'Elg-Card'
+    name: 'ElgCard'
 })
 const props = defineProps(cardProps)
 console.log(props)

@@ -3,7 +3,7 @@ import {collapseProps,propsKeyList,propsKeyEvent} from './props';
 import "@/style/components/Collapse.scss";
 import {provide,computed} from "vue";
     defineOptions({
-        name:'Elg-Collapse'
+        name:'ElgCollapse'
     })
     const props = defineProps(collapseProps)
     const emit = defineEmits(['update:modelValue','change'])

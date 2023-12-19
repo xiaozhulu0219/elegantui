@@ -12,7 +12,9 @@
 
   padding: 5px;
   box-sizing: border-box;
-
+  .tooltip_trigger-element{
+    display: inline-block;
+  }
   .tooltip_poper-element {
     background-color: var(--elg-tooltip-bg-color);
     color: var(--elg-tooltip-text-color);

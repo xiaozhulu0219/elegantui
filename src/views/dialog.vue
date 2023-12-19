@@ -50,6 +50,13 @@
      title="温馨提醒">
       传递了 title、width、top 这三个 prop
     </Elg-Dialog>
+    <!-- 以下代码为测试遮罩层显示位置,测试完毕请注释 -->
+  <!-- <div style="height: 800px;width: 100%;border: 1px solid #cccc;"></div>
+  <Elg-Button type="text" @click="isShow5 = !isShow5">
+      点击打开基本对话框
+    </Elg-Button>
+    <Elg-Dialog :visible="isShow5" @close="isShow5 = !isShow5" @confirm="isShow5 = !isShow5">
+    这是一个基本的对话框</Elg-Dialog> -->
 </template>
 
 <script setup>
@@ -59,6 +66,9 @@ const isShow1 = ref(false);
 const isShow2 = ref(false);
 const isShow3 = ref(false);
 const isShow4 = ref(false);
+
+// 以下代码为测试遮罩层显示位置,测试完毕请注释
+// const isShow5 = ref(false);
 
 </script>
 

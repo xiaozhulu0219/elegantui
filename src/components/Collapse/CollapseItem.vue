@@ -3,7 +3,7 @@ import {collapseItemProps,propsKeyList,propsKeyEvent} from "./props";
 import "@/style/components/Collapse.scss";
 import {ref,onMounted,inject,computed} from "vue";
 defineOptions({
-        name:'Elg-Collapse-Item'
+        name:'ElgCollapseItem'
     })
 const props = defineProps(collapseItemProps)
 // const isFold = ref(true);// 是否折叠

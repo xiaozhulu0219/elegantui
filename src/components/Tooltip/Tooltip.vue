@@ -5,7 +5,7 @@ import "@/style/components/Tooltip.scss";
 import { createPopper } from '@popperjs/core';
 const isShow = ref(false)// 默认先开启打开
 defineOptions({
-    name: 'Elg-Tooltip'
+    name: 'ElgTooltip'
 })
 const emit = defineEmits(['visible-change'])
 const props = defineProps(tooltipProps)

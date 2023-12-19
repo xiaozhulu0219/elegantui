@@ -8,9 +8,11 @@ export default defineConfig({
   plugins: [vue(),vueJsx(),],
   resolve: {
     // 配置路径别名
-    alias: {
+    alias:{
       '@': path.resolve(__dirname, './src'),
+      vue: path.resolve('./node_modules/vue')
     },
+    
   },
   css:{
     preprocessorOptions:{
@@ -27,16 +29,35 @@ export default defineConfig({
       name:'ElegantUI',
       fileName:'ElegantUI',
       formats: ['es']
+    },
+    rollupOptions: {
+      external: [
+        'vue',
+        '@fortawesome/fontawesome-svg-core',
+        '@fortawesome/free-solid-svg-icons',
+        '@fortawesome/vue-fontawesome',
+        '@popperjs/core',
+        
+      ],
+      output: {
+        globals: {
+          vue: 'Vue'
+        }
+      }
     }
   },
-  rollupOptions: {
-    external: [
-      'vue',
-      '@fortawesome/fontawesome-svg-core',
-      '@fortawesome/free-solid-svg-icons',
-      '@fortawesome/vue-fontawesome',
-      '@popperjs/core',
-      
-    ]
-  }
+  external: [
+    'vue',
+    '@fortawesome/fontawesome-svg-core',
+    '@fortawesome/free-solid-svg-icons',
+    '@fortawesome/vue-fontawesome',
+    '@popperjs/core',
+    
+  ],
+  output: {
+    globals: {
+      vue: 'Vue'
+    }
+  },
+  
 })

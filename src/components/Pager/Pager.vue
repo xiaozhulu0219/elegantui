@@ -4,7 +4,7 @@ import "@/style/components/pager.scss";
 import { computed } from "vue";
 
 defineOptions({
-    name: 'Elg-Pager'
+    name: 'ElgPager'
 })
 const emit = defineEmits(['current-change'])
 

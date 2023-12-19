@@ -6,7 +6,7 @@ import RenderComp from "@/components/renderComp.jsx"
 import { ref } from "vue";
 const tooltipRef = ref()
 defineOptions({
-    name: 'Elg-Dropdown'
+    name: 'ElgDropdown'
 })
 const props = defineProps(DropdownProps);
 const emit = defineEmits(['visible-change', 'select']);
