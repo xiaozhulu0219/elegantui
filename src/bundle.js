@@ -13,6 +13,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 /* add icons to the library */
 library.add(fas)
 
+console.log('引入成功')
 // 引入样式
 import "@/style/index.scss";
 

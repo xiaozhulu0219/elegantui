@@ -9,7 +9,7 @@
   --elg-tooltip-offset2:-4px;
   --elg-tooltip-offset3:-2px;
   --elg-tooltip-offset4:-4px;
-
+  display: inline-block;
   padding: 5px;
   box-sizing: border-box;
   .tooltip_trigger-element{
@@ -23,6 +23,10 @@
     border: var(--elg-tooltip-border);
     line-height: 30px;
     border-radius: var(--elg-tooltip-border-radius);
+    box-shadow: 0 0 3px 1px #aaa;
+    display: inline-block;
+    text-align: center
+    ;
     // &::before {
     //     content: '';
     //     height: 8px;

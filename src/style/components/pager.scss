@@ -6,13 +6,13 @@
     --elg-pager-icon-disable:var(--elg-disabled-text-color);
     --elg-pager-bg-color:transparent;
     --elg-pager-size:30px;
-
+    --elg-trans-back:rgba(255,255,255,0.3);
     display: flex;
     align-items: center;
     
     a {
         margin: 0 3px;
-        color: var(--elg-pager-text-color);
+        color: inherit;
         font-size: var(--elg-pager-text-font-size);
         font-weight: bold;
         cursor: pointer;
@@ -62,7 +62,10 @@
 @each $val in primary,warning,danger,info,success{
     .elg-pager-#{$val}{
         // --elg-pager-bg-color:var(--#{$val});
-        --elg-pager-bg-color:var(--elg-fill-color-dark);
+        // --elg-pager-bg-color:var(--elg-fill-color-dark);
+        --elg-pager-bg-color:var(--elg-trans-back);
+
+        
         a.active{
             --elg-pager-bg-color: var(--#{$val});
             --elg-pager-text-active-color:#fff;

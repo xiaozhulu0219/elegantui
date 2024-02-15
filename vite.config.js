@@ -4,6 +4,7 @@ import vueJsx from "@vitejs/plugin-vue-jsx";
 import path from "path"
 import { fileURLToPath, URL } from 'node:url'
 import { resolve, dirname } from 'path'
+import externalGlobals from 'rollup-plugin-external-globals'
 // https://vitejs.dev/config/
 dirname(fileURLToPath(import.meta.url))
 console.log('1',import.meta.url);
@@ -21,8 +22,18 @@ export default defineConfig({
   css:{
     preprocessorOptions:{
       scss:{
-        additionalData:`@import "./src/style/var.scss";`
+        additionalData:`@import "./src/style/var.scss"; @import "./src/style/doc_var.scss";`
       }
+    }
+  },
+  build: {
+    rollupOptions: {
+      external: ['vue'],
+      plugins: [
+        externalGlobals({
+          vue: 'Vue',
+        })
+      ]
     }
   }
 })

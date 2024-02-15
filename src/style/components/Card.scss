@@ -3,7 +3,7 @@
     --elg-card-border-style:var(--elg-border-style);
     --elg-card-border-color:var(--elg-border-color);
     --elg-card-border-color-light:rgba(0,0,0,0.2);
-    --elg-card-border-shadow-var:0px 2px 12px 0px var(--elg-card-border-color-light);
+    --elg-card-border-shadow-var:0px 2px 12px 0px var(--elg-card-border-color-light), 0px 2px 12px 0px #ccc;
     --elg-card-border-shadow:var(--elg-card-border-shadow-var);
     --elg-card-bord-radius:var(--elg-border-radius-base);
     box-shadow: var(--elg-card-border-shadow);

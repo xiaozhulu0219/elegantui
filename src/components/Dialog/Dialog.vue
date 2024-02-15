@@ -22,7 +22,7 @@ const handleClick = () => {
         <div class="elg-dialog-container" v-if="props.visible"   :style="{'--elg-dialog-width':props.width}">
           
 
-                <div class="elg-dialog" :style="{ width: props.width, top: props.top }">
+                <div class="elg-dialog" :style="{ width: props.width, top: props.top, }">
                     <div class="elg-dialog-title">
                         <div class="elg-dialog-title-left">
                             {{ props.title }}

@@ -2,15 +2,19 @@
 
 # elegantui-plus 文档
 
-`elegantui-plus`是一个基于vue3,使用vite搭建的常用组件库,开发者可以选择使用npm导入或者以cdn的形式快速上手, [源码地址](https://gitee.com/HelloWorldIII/elegant-ui.git)
-文档持续更新中
+`elegantui-plus`是一个基于vue3,使用vite搭建的常用组件库,开发者可以选择使用npm导入或者以cdn的形式快速上手.
+
+[源码地址](https://github.com/xiaozhulu0219/elegantui)
+
+[文档地址](https://static-mp-d08e57ac-bfc6-460b-8732-05e71820dffa.next.bspapp.com)
+
 ## 快速开始
 ### 完整引入
 推荐使用完整引入
 ```js
 import { createApp } from 'vue';
-import Elegantui from "elegantui";
-import "elegantui/style.css";
+import ElementPlus from "elegantui-plus";
+import "elegantui-plus/style.css";
 import App from './App.vue'
 const app = createApp(App);
 app.use(ElementPlus)
@@ -25,12 +29,13 @@ elegantui-plus组件库对开发中的常用组件进行封装,提供如下按�
 
 ```js
 import { createApp } from 'vue';
-import App from './App.vue';
-import {ElgButton,ElgIcon} from "elegantui";
+import {ElgButton,ElgIcon} from "elegantui-plus";
+import "elegantui-plus/style.css";
+import App from './App.vue'
 const app = createApp(App);
-ElgButton.install(app);
-ElgIcon.install(app);
-app.mount('#app')
+ElgButton.install(app)
+ElgIcon.install(app)
+app.mount('#app') 
 
 ```
 
@@ -38,8 +43,9 @@ app.mount('#app')
 
 ```js
 import { createApp } from 'vue';
-import App from './App.vue';
-import {ElgButton,ElgIcon,ElgCard} from "elegantui";
+import {ElgButton,ElgIcon,ElgCard} from "elegantui-plus";
+import "elegantui-plus/style.css";
+import App from './App.vue'
 const app = createApp(App);
 ElgButton.install(app)
 ElgCard.install(app)
@@ -50,20 +56,21 @@ app.mount('#app')
 #### collapse组件
 ```js
 import { createApp } from 'vue';
-import App from './App.vue';
-import {ElgCollapse,ElgCollapseItem,ElgIcon} from "elegantui";
+import {ElgCollapse,ElgCollapseItem} from "elegantui-plus";
+import "elegantui-plus/style.css";
+import App from './App.vue'
 const app = createApp(App);
 ElgCollapse.install(app)
 ElgCollapseItem.install(app)
-ElgIcon.install(app)
-app.mount('#app')
+app.mount('#app') 
 
 ```
 #### dialog组件
 ```js
 import { createApp } from 'vue';
-import App from './App.vue';
-import {ElgDialog,ElgButton,ElgIcon} from "elegantui";
+import {ElgButton,ElgIcon,ElgDialog} from "elegantui-plus";
+import "elegantui-plus/style.css";
+import App from './App.vue'
 const app = createApp(App);
 ElgDialog.install(app);
 ElgButton.install(app)
@@ -74,12 +81,13 @@ app.mount('#app')
 #### tooltip组件
 ```js
 import { createApp } from 'vue';
-import App from './App.vue';
-import {ElgButton,ElgIcon,ElgTooltip} from "elegantui";
+import {ElgButton,ElgIcon,ElgTooltip} from "elegantui-plus";
+import "elegantui-plus/style.css";
+import App from './App.vue'
 const app = createApp(App);
 ElgButton.install(app);
 ElgIcon.install(app);
-ElgTooltip.install(app);
+ElgTooltip.install(app)
 app.mount('#app')
 
 
@@ -88,14 +96,14 @@ app.mount('#app')
 #### dropdown组件
 ```js
 import { createApp } from 'vue';
-import App from './App.vue';
-import {ElgDropdown,ElgButton,ElgIcon,ElgTooltip} from "elegantui";
+import {ElgButton,ElgIcon,ElgTooltip,ElgDropdown} from "elegantui-plus";
+import "elegantui-plus/style.css";
+import App from './App.vue'
 const app = createApp(App);
-
-ElgDropdown.install(app);
 ElgButton.install(app);
 ElgIcon.install(app);
 ElgTooltip.install(app);
+ElgDropdown.install(app);
 app.mount('#app')
 
 
@@ -104,11 +112,13 @@ app.mount('#app')
 #### 使用pager组件
 ```js
 import { createApp } from 'vue';
-import App from './App.vue';
-import {ElgPager,ElgIcon} from "elegantui";
+import {ElgPager,ElgIcon} from "elegantui-plus";
+import "elegantui-plus/style.css";
+import App from './App.vue'
+const app = createApp(App);
 ElgPager.install(app);
 ElgIcon.install(app);
-const app = createApp(App);
+app.mount('#app')
 ```
 
 ## 组件

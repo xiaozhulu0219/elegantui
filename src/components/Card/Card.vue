@@ -5,7 +5,7 @@ defineOptions({
     name: 'ElgCard'
 })
 const props = defineProps(cardProps)
-console.log(props)
+// console.log(props)
 
 </script>
 

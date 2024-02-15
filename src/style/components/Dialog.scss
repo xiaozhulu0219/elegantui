@@ -20,6 +20,7 @@
 
 .elg-dialog {
     // border: 1px solid #ccc;
+    z-index: 999;
     background-color: var(--elg-dialog-bg-color);
     position: absolute;
     left: 0px;

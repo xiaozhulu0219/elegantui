@@ -41,5 +41,8 @@ app.component('Elg-Collapse-Item',CollapseItem)
 app.component('Elg-Tooltip',Tooltip)
 app.component('Elg-Dropdown',Dropdown)
 app.use(router)
+// 停止计时器
+clearInterval(loadingtimer)
+loadingtimer=null
 app.mount('#app')
 

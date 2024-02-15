@@ -88,3 +88,15 @@ hr {
   border: 0;
   border-top: 1px solid var(--elg-border-color-lighter);
 }
+
+
+// 覆盖的样式
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  color:var(--elgdoc-big-text);
+}
+

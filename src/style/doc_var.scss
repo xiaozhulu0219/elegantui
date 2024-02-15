@@ -1,0 +1,125 @@
+// 设置文档的颜色模式
+//背景颜色
+// 浅色背景
+$elgdoc-back-1:#ffffcd;
+$elgdoc-back-2:#ffdead;
+$elgdoc-back-3:#ffe384;
+
+$elgdoc-back-4:rgb(21,21,21);
+$elgdoc-back-5:rgb(187,55,251);
+
+// $elgdoc-back-6:#5dabad;
+$elgdoc-back-6: rgb(142,0,146);
+
+// rgb(142,0,146)
+// 深色背景
+
+//文字颜色
+$elgdoc-font-1:var(--elg-text-color-primary);
+$elgdoc-font-2:var(--elg-text-color-secondary);
+
+
+//特殊文字
+$elgdoc-spi-font1:rgb(253,286,116);
+
+// 选中颜色
+
+$elgdoc-spi-font2:#7ba604;
+$elgdoc-spi-font3:#fdd84c;
+
+$elgdoc-back-select1: lighten(#7ba604,55%);
+$elgdoc-back-select2:rgb(95, 33, 124);
+// hover颜色
+$elg-doc-hover1:rgb(255,255,255,0.6);
+$elg-doc-hover2:rgb(203, 116, 247);
+
+// code 背景
+
+
+
+// border颜色
+$elgdoc-border-color1:#000;
+// $elgdoc-border-color2:#5dabad;
+// $elgdoc-border-color2:#872657;
+$elgdoc-border-color2:#968fd8;
+
+// 浅色文字
+
+$elgdoc-font-3:#fff;
+
+
+// 滚动条
+
+$elgdoc-scroll-color1:#{$elgdoc-back-3};
+$elgdoc-scroll-color2: rgba(0, 0, 0, 0.2); 
+$elgdoc-scroll-color3: rgba(255, 255, 255, 0.2); 
+$elgdoc-scroll-color4: rgba(0, 0, 0, 0.5); 
+
+$elg-code-back1:#{$elg-doc-hover1};
+$elg-code-back2:#{$elgdoc-scroll-color4};
+
+$elgdoc-scroll-color5: rgba(255, 255, 255, 0.1); 
+$elgdoc-scroll-color6: #{$elgdoc-back-2}; 
+$elgdoc-scroll-color7:rgb(45,45,45);
+// 组件块的背景
+$elgdoc-comp-back1:#{$elgdoc-scroll-color5};
+$elgdoc-comp-back2:#ffffcd;
+
+$elgdoc-comp-border1:#{$elgdoc-back-3};
+$elgdoc-comp-border2:#ccc;
+
+$elgdoc-notify-back1:#{$elgdoc-back-5};
+$elgdoc-notify-back2:#ffffcd;
+
+$elgdoc-props-theme1:#{$elgdoc-back-2};
+$elgdoc-props-theme2:blueviolet;
+
+$elgdoc-table-type1:#{$elgdoc-back-3};
+$elgdoc-table-type2:#{$elgdoc-back-6};
+
+:root{
+    --elgdoc-background:#{$elgdoc-back-1};
+    --elgdoc-header-background:#{$elgdoc-back-2};
+    --elgdoc-menu-background:#{$elgdoc-back-3};
+
+    --elgdoc-big-text:#{$elgdoc-font-1};
+    --elgdoc-border-color:#{$elgdoc-border-color1};
+
+    --elg-doc-spi-text:#{$elgdoc-font-1};
+    --elg-doc-selected-text:#{$elgdoc-spi-font2};
+    --elgdoc-hover-color:#{$elg-doc-hover1};
+    --elgdoc-back-sel:#{$elgdoc-back-select1};
+    --elgdoc-scroll-track:#{$elgdoc-scroll-color2};
+    --elgdoc-scroll-thumb:#{$elgdoc-back-2};
+    --elgdoc-code-back:#{$elg-doc-hover1};
+    --elgdoc-code-back2:#{$elg-code-back1};
+    --elgdoc-comp-back:#{$elgdoc-comp-back2};
+    --elgdoc-comp-border:#{$elgdoc-comp-border1};
+    --elgdoc-notify-back:#{$elgdoc-notify-back2};
+    --elgdoc-props-theme:#{$elgdoc-props-theme1};
+    --elgdoc-table-type:#{$elgdoc-table-type1};
+}   
+
+.elg-layout-dark{
+    --elgdoc-background:#{$elgdoc-back-4};
+    --elgdoc-header-background:#{$elgdoc-back-5};
+    --elgdoc-big-text:#{$elgdoc-font-3};
+    --elgdoc-menu-background:#{$elgdoc-back-6};
+    --elgdoc-border-color:#{$elgdoc-border-color2};
+
+    --elg-doc-spi-text:#{$elgdoc-spi-font1};
+    --elg-doc-selected-text:#{$elgdoc-spi-font1};
+    --elgdoc-hover-color:#{$elg-doc-hover2};
+    --elgdoc-back-sel:#{$elgdoc-back-select2};
+    --elgdoc-scroll-track:#{$elgdoc-scroll-color3};
+    --elgdoc-scroll-thumb:#{$elgdoc-scroll-color1};
+    --elgdoc-code-back:#{$elgdoc-scroll-color3};
+    --elgdoc-code-back2:#{$elg-code-back2};
+    --elgdoc-comp-back:#{$elgdoc-scroll-color7};
+    --elgdoc-comp-border:#{$elgdoc-comp-border2};
+    --elgdoc-notify-back:#{$elgdoc-notify-back1};
+    --elgdoc-props-theme:#{$elgdoc-props-theme2};
+    --elgdoc-table-type:#{$elgdoc-table-type2};
+
+
+}
